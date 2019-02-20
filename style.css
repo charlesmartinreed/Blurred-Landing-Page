@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed|IBM+Plex+Sans:700');
+
+body {
+	background: rgba(0, 0, 0, 0.9);
+	margin: 0;
+	color: #FFF;
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+.showcase::after {
+/* interestingly enough, the background doesn't render WITHOUT the content property, even if it's an empty string... */
+	content: '';
+	height: 100vh;
+	width: 100%;
+	background-image: url(images/showcase.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+
+	/* on hover, blur is removed */
+	-webkit-filter: blur(10px);
+	        filter: blur(10px);
+	-webkit-transition: all 500ms;
+	-webkit-transition: all 500ms;
+	transition: all 500ms;
+}
+
+.showcase:hover::after {
+	-webkit-filter: blur(0px);
+	        filter: blur(0px);
+}
